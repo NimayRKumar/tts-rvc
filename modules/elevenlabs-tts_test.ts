@@ -1,4 +1,4 @@
-import { textToSpeechElevenLabs } from './elevenlabs-tts.js';
+import { textToSpeech } from './elevenlabs-tts.js';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
@@ -12,7 +12,7 @@ const testElevenLabs = async () => {
     const voiceID = '21m00Tcm4TlvDq8ikWAM'; //Rachel
 
     console.log(`Generating speech for text: "${text}" using voiceId: ${voiceID}...`);
-    const filename = await textToSpeechElevenLabs(text, voiceID, outPath);
+    const filename = await textToSpeech(text, voiceID, outPath);
 
     if (filename) {
         console.log(`Test audio file created: ${filename}`);

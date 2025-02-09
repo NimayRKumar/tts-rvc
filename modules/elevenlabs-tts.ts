@@ -5,7 +5,7 @@ import { ElevenLabsClient } from "elevenlabs";
 dotenv.config();
 const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 
-export const textToSpeechElevenLabs = async (text: string, voiceID: string, outPath: string): Promise<string | undefined> => {
+export const textToSpeech = async (text: string, voiceID: string, outPath: string): Promise<string | undefined> => {
   if (!ELEVENLABS_API_KEY) {
       console.error("Error: ELEVENLABS_API_KEY environment variable not set.");
       return undefined;

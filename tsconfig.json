@@ -1,15 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es2022",      /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "module": "es2022",      /* Specify what module code is generated. */
-    "moduleResolution": "node", /* Specify how TypeScript looks up modules. */
-    "rootDir": "./modules",
-    "outDir": "./dist",        /* Specify an output folder for all emitted files. */
-    "esModuleInterop": true,    /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-    "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
-    "strict": true,            /* Enable all strict type-checking options. */
-    "skipLibCheck": true       /* Skip type checking all .d.ts files. */
+    "target": "es2022",
+    "module": "Node16",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "resolveJsonModule": true
   },
-  "include": ["modules/**/*.ts"], // Include all .ts files in the project directory
-  "exclude": ["node_modules"]
+  "include": [
+    "modules/**/*",
+    "scripts/**/*",
+    "server.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
 }
